@@ -9,7 +9,7 @@ public:
     {
         X = 0;
         Y = 0;
-    };
+    }
 
     void setX(double x)
     {
@@ -35,20 +35,19 @@ public:
     {
         X = x;
         Y = y;
-    };
-
-    Wektor2D operator+(Wektor2D v)
-    {
-        double result_x, 
-        double result_y;
-        result_x = v.getX() + X;
-        result_y = v.getY() + Y;
-        return Wektor2D(result_x, result_y);
     }
 
-    double operator*(Wektor2D v)
+    Wektor2D operator+(Wektor2D vec)
     {
-        double result_multi = v.getX() * X + v.getY() * Y;
-        return result_multi;
+        double resultx, resulty;
+        resultx = vec.getX() + X;
+        resulty = vec.getY() + Y;
+        return Wektor2D(resultx, resulty);
+    }
+
+    double operator*(Wektor2D vec)
+    {
+        double result3 = vec.getX() * X + vec.getY() * Y;
+        return result3;
     }
 };
