@@ -35,7 +35,7 @@ public:
     {
         X = x;
         Y = y;
-    }
+    };
 
     Wektor2D operator+(Wektor2D v)
     {
